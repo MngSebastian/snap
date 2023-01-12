@@ -1,7 +1,9 @@
 import { useState } from "react"
 import useMediaQuery from "../hooks/useMediaQuery";
- 
-function Navbar() {
+import {motion} from "framer-motion"
+function Navbar( 
+  
+) {
   const [isMenuToggled, setIsMenuToggled] = useState(false);
   const isDesktop = useMediaQuery("(min-width: 768px)");
 
@@ -51,28 +53,40 @@ function Navbar() {
                 </button>
               </div>
             {/* MENU ITEMS */}
-            <div className="flex flex-col items-start text-[16px] text-medium-gray gap-4 bg-red-500  ml-[10%] mt-[12%] text-2xl h-5/6">                
+              <motion.div
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.5 }}
+                transition={{ duration: 0.3 }}
+                variants={{
+                  hidden: { opacity: 0, x: 40 },
+                  visible: { opacity: 1, x: 0 },
+                }}
+              >
+
+
+              <div className="flex flex-col items-start text-[16px] text-medium-gray gap-4   ml-[10%] mt-[12%] text-2xl h-5/6">                
                 <p className={`${hover} `}>Features <span className="mb-1 ml-3 content-arrowDown"></span></p>
-                <div className=" flex-col bg-yellow-500  h-1/6 text-sm pl-[20] ml-16 w-full">
+                <div className="flex  flex-col  gap-2 h-1/6 text-sm pl-[20] ml-16 w-full">
                   <div className="flex ">
                     <img className="mr-4" src="../assets/images/icon-todo.svg" alt="todo-list-icon"/>
-                    <p>Todo List</p>
+                    <button>Todo List</button>
                   </div>
                   <div className="flex ">
                     <img className="mr-4" src="../assets/images/icon-calendar.svg" alt="calendar-icon"/>
-                    <p>Calendar</p>
+                    <button>Calendar</button>
                   </div>
                   <div className="flex">
                     <img className="mr-4" src="../assets/images/icon-reminders.svg" alt="reminders-icon"/>
-                    <p>Reminders</p>
+                    <button>Reminders</button>
                   </div>
                   <div className="flex">
                     <img className="mr-4" src="../assets/images/icon-planning.svg" alt="planning-icon"/>
-                    <p>Planning</p>
+                    <button>Planning</button>
                   </div>
                 </div>
                 <p className={`${hover}`}>Company <span className="mb-1 ml-3 content-arrowDown"></span></p>
-                <div className=" bg-yellow-500  h-1/6 pl-[20] ml-16 w-full text-sm">
+                <div className="flex flex-col gap-4   h-1/6 pl-[20] ml-16 w-full text-sm">
                     <p>History</p>
                     <p>Our Team</p>
                     <p>Blog</p>
@@ -85,6 +99,7 @@ function Navbar() {
                   <button className={`${hover} border-2    border-medium-gray hover:border-almost-black  rounded-2xl`}>Register</button>
               </div>
             </div>
+          </motion.div>
 
             </div>
           )}
