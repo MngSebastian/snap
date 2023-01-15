@@ -9,3 +9,4 @@ The purpose of this callenge for me was to learn tailwind-css.
 
 # Mobile
 ![snap-mobile](https://user-images.githubusercontent.com/44436863/212549724-27b29fc7-b576-4c12-ae3d-ac0a1d505de5.png)
+![snap-mobile-sidebar](https://user-images.githubusercontent.com/44436863/212549836-23c08a31-406b-4a9a-80a1-f6fa48f67411.png)
