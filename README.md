@@ -5,6 +5,7 @@ The purpose of this challenge for me was to learn tailwind-css.
 
 # Desktop
 ![snap-desktop](https://user-images.githubusercontent.com/44436863/212549690-6391710a-af39-4a75-89ed-d79ff0a504ca.png)
+![snap-desktop-dropdown](https://user-images.githubusercontent.com/44436863/212549966-ee1458f1-14a1-4d81-8575-5654c8b4d6d4.png)
 
 
 # Mobile
