@@ -13,7 +13,8 @@ const Landing = () => {
         </div>
         <div className="flex items-center   w-4/6 flex-col">
           <div>
-            <h3 className="font-bold text-[70px]   mt-8">Make <br className="pt-[-20px]"></br> remote work</h3>
+            <h3 className="font-bold text-[70px] mt-8">Make</h3>
+            <h3 className="font-bold text-[70px] mt-[-38px]"> remote work</h3>
 
             <p className="text-[19px] text-medium-gray   mt-8">Get your team in sync, no matter your location.<br />
             Streamline processes, 
