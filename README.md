@@ -2,4 +2,10 @@
 
 The purpose of this callenge for me was to learn tailwind-css.
 
+
+# Desktop
 ![snap-desktop](https://user-images.githubusercontent.com/44436863/212549690-6391710a-af39-4a75-89ed-d79ff0a504ca.png)
+
+
+# Mobile
+![snap-mobile](https://user-images.githubusercontent.com/44436863/212549724-27b29fc7-b576-4c12-ae3d-ac0a1d505de5.png)
