@@ -22,25 +22,62 @@ function Navbar(
 
 
 
-    <div className="flex font-epilogue justify-between w-full py-4">
+    <div className="flex font-epilogue  justify-between w-screen py-4">
       {/* DESKTOP NAV */}
         {isDesktop ? (
-          <div >
-            <div className="flex    w-2/4 transition duration-300 text-medium-gray items-center h-16 xs:gap-x-2 md:-gap-x-16  pl-16">
-              <p className=""></p>
-              <p className={`${hover}`}>Features</p>
+          <div className="flex justify-between w-full">
+            <div className="flex  w-[75%] text-medium-gray items-center h-10 gap-4 md:gap-12  pl-4">
+              <img src="../assets/images/logo.svg" alt="snap-logo"/>
+              {/* features DropDown Btn */}
+              <button onClick={() => setIsFeatures(!isFeatures)} className={`${hover} `}>
+                Features <span className={`${isFeatures ? 'content-arrowUp' : 'content-arrowDown'} `}></span>                  
+              </button>
+              <div className={`${isFeatures ? "" : 'hidden'} flex justify-center shadow-[0px_0px_20px_1px_rgba(0,0,0,0.1)] absolute bg-white 
+                flex-col mt-48  ml-20 gap-2 h-[128px] text-sm pl-4 rounded-xl w-36`}>
+                <div className="flex ">
+                  <img className="mr-4" src="../assets/images/icon-todo.svg" alt="todo-list-icon"/>
+                  <button>Todo List</button>
+                </div>
+                <div className="flex ">
+                  <img className="mr-4" src="../assets/images/icon-calendar.svg" alt="calendar-icon"/>
+                  <button>Calendar</button>
+                </div>
+                <div className="flex">
+                  <img className="mr-4" src="../assets/images/icon-reminders.svg" alt="reminders-icon"/>
+                  <button>Reminders</button>
+                </div>
+                <div className="flex">
+                  <img className="mr-4" src="../assets/images/icon-planning.svg" alt="planning-icon"/>
+                  <button>Planning</button>
+                </div>
+              </div>
+              
+              
+              {/* Company button Dropdown */}
+              <button  onClick={() => setIsCompany(!isCompany)} className={`${hover}`}>
+                Company <span className={`${isCompany ? 'content-arrowUp' : 'content-arrowDown'} `}></span>
+              </button>
+              <div className={`${isCompany ? "" : 'hidden'} flex justify-center shadow-[0px_0px_20px_1px_rgba(0,0,0,0.1)] absolute bg-white 
+                flex-col mt-44  ml-64 gap-2 h-28 text-sm pl-4 rounded-xl w-24`}>
+                    <p>History</p>
+                    <p>Our Team</p>
+                    <p>Blog</p>
+              </div>
+              
+              
               <p className={`${hover}`}>Company</p>
               <p className={`${hover}`}>Careers</p>
               <p className={`${hover}`}>About</p> 
 
             </div>
-            <div className="flex  xs:bg-purple-500">
-                <button className={`${hover}`}>Login</button>
-                <button className={`${hover} border-2    border-medium-gray hover:border-almost-black  rounded-2xl`}>Register</button>
+            <div className="flex justify-end w-[220px] pr-6 text-medium-gray">
+                <button className={`${hover} pr-8`}>Login</button>
+                <button className={`${hover} border-2    border-medium-gray hover:border-almost-black  rounded-2xl px-4`}>Register</button>
             </div>
 
 
           </div>
+          
         ) : (
           <div className="flex  justify-between w-full mx-4">
             <img src="../assets/images/logo.svg" alt="snap-logo"/>
@@ -56,7 +93,6 @@ function Navbar(
             <div className=" fixed right-0 top-0 bottom-0 h-full bg-white w-[220px]">
               {/* CLOSE ICON */}
               <div className="flex justify-end pt-10 pr-10">
-                {/* <button onClick={() => setIsMenuToggled(!isMenuToggled)}> */}
                 <button onClick={handleClick}>
                 <img  src="../assets/images/icon-close-menu.svg" alt="icon-close-menu"/>
                 </button>
@@ -102,7 +138,7 @@ function Navbar(
                     <p>History</p>
                     <p>Our Team</p>
                     <p>Blog</p>
-                  </div>
+                </div>
                 <p className={`${hover}`}>Careers</p>
                 <p className={`${hover}`}>About</p> 
 
