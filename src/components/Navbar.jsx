@@ -166,7 +166,10 @@ function Navbar() {
             <div className="flex flex-col items-start text-[16px] text-medium-gray gap-4   ml-[10%] mt-[12%] text-2xl h-5/6">
               {}
               <button
-                onClick={() => setIsFeatures(!isFeatures)}
+                onClick={() => {
+                  setIsFeatures(!isFeatures);
+                  setIsCompany(false);
+                }}
                 className={`${hover} `}
               >
                 Features{" "}
@@ -215,7 +218,10 @@ function Navbar() {
                 </div>
               </div>
               <button
-                onClick={() => setIsCompany(!isCompany)}
+                onClick={() => {
+                  setIsCompany(!isCompany);
+                  setIsFeatures(false);
+                }}
                 className={`${hover}`}
               >
                 Company{" "}
@@ -244,10 +250,6 @@ function Navbar() {
                 >
                   Register
                 </button>
-                <p className="text-xs text-center mt-[45%]">
-                  (Buttons are not actually clickable, the only purpose of this
-                  website was to learn Tailwindcss.)
-                </p>
               </div>
             </div>
           </motion.div>

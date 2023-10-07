@@ -94,6 +94,10 @@ const Landing = () => {
               alt="maker-logo"
             />
           </div>
+          <p className="text-sm px-8 text-gray-400">
+            This is a simple landing page so the buttons won't actually take you
+            anywhere.
+          </p>
         </div>
       )}
     </div>
