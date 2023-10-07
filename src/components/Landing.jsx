@@ -6,9 +6,9 @@ const Landing = () => {
     <div>
       {isDesktop ? (
         <div className="flex h-full w-screen flex-row-reverse justify-center pt-8">
-          <div className="flex pr-24">
+          <div className="flex pr-24 ">
             <img
-              className="w-[650px] md:h-[570px] xl:h-[620px]"
+              className="w-[650px] md:h-[570px]  xl:h-[620px]"
               src="../assets/images/image-hero-desktop.png"
               alt="landing-logo"
             />
@@ -59,6 +59,7 @@ const Landing = () => {
       ) : (
         <div className="flex flex-col font-epilogue text-center items-center">
           <img
+            className="px-6"
             src="../assets/images/image-hero-mobile.png"
             alt="landing-logo"
           />
