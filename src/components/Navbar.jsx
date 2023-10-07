@@ -17,7 +17,7 @@ function Navbar() {
     setIsCompany(false);
   }
   return (
-    <div className="flex font-epilogue border-b-2 justify-between w-screen py-4">
+    <div className="flex font-epilogue border-b-2 justify-between w-screen py-4 mb-6">
       {/* DESKTOP NAV */}
       {isDesktop ? (
         <div className="flex justify-between w-full">
@@ -25,7 +25,10 @@ function Navbar() {
             <img src="../assets/images/logo.svg" alt="snap-logo" />
             {/* features DropDown Btn */}
             <button
-              onClick={() => setIsFeatures(!isFeatures)}
+              onClick={() => {
+                setIsFeatures(!isFeatures);
+                setIsCompany(false);
+              }}
               className={`${hover} `}
             >
               Features{" "}
@@ -47,7 +50,9 @@ function Navbar() {
                   src="../assets/images/icon-todo.svg"
                   alt="todo-list-icon"
                 />
-                <button>Todo List</button>
+                <button className="hover:border-b hover:text-black">
+                  Todo List
+                </button>
               </div>
               <div className="flex ">
                 <img
@@ -55,7 +60,9 @@ function Navbar() {
                   src="../assets/images/icon-calendar.svg"
                   alt="calendar-icon"
                 />
-                <button>Calendar</button>
+                <button className="hover:border-b hover:text-black">
+                  Calendar
+                </button>
               </div>
               <div className="flex">
                 <img
@@ -63,7 +70,9 @@ function Navbar() {
                   src="../assets/images/icon-reminders.svg"
                   alt="reminders-icon"
                 />
-                <button>Reminders</button>
+                <button className="hover:border-b hover:text-black">
+                  Reminders
+                </button>
               </div>
               <div className="flex">
                 <img
@@ -71,13 +80,18 @@ function Navbar() {
                   src="../assets/images/icon-planning.svg"
                   alt="planning-icon"
                 />
-                <button>Planning</button>
+                <button className="hover:border-b hover:text-black">
+                  Planning
+                </button>
               </div>
             </div>
 
             {/* Company button Dropdown */}
             <button
-              onClick={() => setIsCompany(!isCompany)}
+              onClick={() => {
+                setIsCompany(!isCompany);
+                setIsFeatures(false);
+              }}
               className={`${hover}`}
             >
               Company{" "}
@@ -90,12 +104,16 @@ function Navbar() {
             <div
               className={`${
                 isCompany ? "" : "hidden"
-              } flex justify-center shadow-[0px_0px_20px_1px_rgba(0,0,0,0.1)] absolute bg-white 
+              } flex justify-center items-start shadow-[0px_0px_20px_1px_rgba(0,0,0,0.1)] absolute bg-white 
                 flex-col mt-44  ml-64 gap-2 h-28 text-sm pl-4 rounded-xl w-24`}
             >
-              <p>History</p>
-              <p>Our Team</p>
-              <p>Blog</p>
+              <button className="hover:border-b hover:text-black">
+                History
+              </button>
+              <button className="hover:border-b hover:text-black">
+                Our Team
+              </button>
+              <button className="hover:border-b hover:text-black">Blog</button>
             </div>
 
             <p className={`${hover}`}>Company</p>
